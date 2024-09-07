@@ -125,35 +125,72 @@ class ModeView extends StatelessWidget {
                   ),
                 ),
               ),
-              getVerticalSpace(15),
-              SuperTooltip(
-                content: const Text(
-                  "Not Available",
-                  softWrap: true,
-                  style: TextStyle(
-                    color: kPrimaryGreen,
+              getVerticalSpace(25),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                crossAxisAlignment: CrossAxisAlignment.center,
+                children: [
+                  Container(
+                    height: 3,
+                    width: Get.width * 0.35,
+                    color: kWhiteColor,
                   ),
-                ),
-                child: Container(
-                  width: Get.width * 0.7,
-                  decoration: BoxDecoration(
-                    gradient: const LinearGradient(
-                      colors: [kButtonThirdStart, kButtonThirdEnd],
-                      begin: Alignment.topLeft,
-                      end: Alignment.bottomRight,
+                  Text(
+                    "   OR    ",
+                    style: TextStyle(
+                      fontSize: CustomFontSize.large(context),
+                      color: kLightColor,
+                      fontWeight: FontWeight.bold,
                     ),
-                    borderRadius: BorderRadius.circular(50),
                   ),
-                  child: MaterialButton(
-                    onPressed: () {},
-                    child: Padding(
-                      padding: const EdgeInsets.all(8.0),
-                      child: Text(
-                        "Online",
-                        style: TextStyle(
-                            fontSize: CustomFontSize.extraExtraLarge(context),
-                            color: kWhiteColor),
+                  Container(
+                    height: 3,
+                    width: Get.width * 0.35,
+                    color: kWhiteColor,
+                  ),
+                ],
+              ),
+              getVerticalSpace(15),
+              Container(
+                width: Get.width * 0.7,
+                decoration: BoxDecoration(
+                  gradient: const LinearGradient(
+                    colors: [kButtonThirdStart, kButtonThirdEnd],
+                    begin: Alignment.topLeft,
+                    end: Alignment.bottomRight,
+                  ),
+                  borderRadius: BorderRadius.circular(50),
+                ),
+                child: ElevatedButton(
+                  style: ElevatedButton.styleFrom(
+                    padding: const EdgeInsets.all(8.0),
+                    backgroundColor: Colors.transparent,
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(50),
+                    ),
+                    shadowColor: Colors.transparent,
+                  ),
+                  onPressed: () {
+                    showDialog(
+                      context: context,
+                      builder: (context) => AlertDialog(
+                        content: Text(
+                          textAlign: TextAlign.center,
+                          "Not Available Yet",
+                          softWrap: true,
+                          style: TextStyle(
+                            color: kPrimaryGreen,
+                            fontSize: CustomFontSize.large(context),
+                          ),
+                        ),
                       ),
+                    );
+                  },
+                  child: Text(
+                    "Online",
+                    style: TextStyle(
+                      fontSize: CustomFontSize.extraExtraLarge(context),
+                      color: kWhiteColor,
                     ),
                   ),
                 ),
@@ -162,7 +199,8 @@ class ModeView extends StatelessWidget {
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  const Text("Need Help? ", style: TextStyle(color: kWhiteColor)),
+                  const Text("Need Help? ",
+                      style: TextStyle(color: kWhiteColor)),
                   GestureDetector(
                     onTap: () {
                       Get.to(() => const AboutUsView());
