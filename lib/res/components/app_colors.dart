@@ -29,4 +29,3 @@ const Color kButtonSecondEnd = Color(0xFFF89544);
 const Color kButtonSecondStart = Color(0xFFF85F85);
 const Color kButtonThirdEnd = Color(0xFF25A2E6);
 const Color kButtonThirdStart = Color(0xFF2CD37E);
-

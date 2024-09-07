@@ -1,9 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:super_tooltip/super_tooltip.dart';
 import 'package:tic_tac_toe/res/constants/fonts.dart';
 import 'package:tic_tac_toe/view/navigations/multi_player.dart';
-import 'package:tic_tac_toe/view/navigations/single_player.dart';
+import 'package:tic_tac_toe/view/navigations/offline_play.dart';
 import 'package:tic_tac_toe/view/pages/about_view.dart';
 
 import '../../res/components/app_colors.dart';
@@ -86,12 +85,12 @@ class ModeView extends StatelessWidget {
                 ),
                 child: MaterialButton(
                   onPressed: () {
-                    Get.to(() => const SinglePlayerView());
+                    Get.to(() => SinglePlayerView());
                   },
                   child: Padding(
                     padding: const EdgeInsets.all(8.0),
                     child: Text(
-                      "Single Player",
+                      "Play Offline",
                       style: TextStyle(
                           fontSize: CustomFontSize.extraExtraLarge(context),
                           color: kWhiteColor),
@@ -112,7 +111,7 @@ class ModeView extends StatelessWidget {
                 ),
                 child: MaterialButton(
                   onPressed: () {
-                    Get.to(() => const MultiPlayerView());
+                    Get.to(() => MultiPlayerView());
                   },
                   child: Padding(
                     padding: const EdgeInsets.all(8.0),
@@ -187,7 +186,7 @@ class ModeView extends StatelessWidget {
                     );
                   },
                   child: Text(
-                    "Online",
+                    "Play Online",
                     style: TextStyle(
                       fontSize: CustomFontSize.extraExtraLarge(context),
                       color: kWhiteColor,

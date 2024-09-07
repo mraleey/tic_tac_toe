@@ -15,7 +15,7 @@ class MyApp extends StatelessWidget {
   const MyApp({super.key});
   @override
   Widget build(BuildContext context) {
-    return  GetMaterialApp(
+    return GetMaterialApp(
       title: 'Tic Tac Toe',
       debugShowCheckedModeBanner: false,
       defaultTransition: Transition.cupertino,
@@ -24,7 +24,6 @@ class MyApp extends StatelessWidget {
         textTheme: GoogleFonts.nerkoOneTextTheme(),
         primaryTextTheme: GoogleFonts.nerkoOneTextTheme(),
       ),
-
     );
   }
 }

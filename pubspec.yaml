@@ -42,6 +42,7 @@ dependencies:
   intl:
   google_fonts:
   super_tooltip:
+  vibration:
 
 dev_dependencies:
   flutter_test:

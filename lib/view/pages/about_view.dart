@@ -35,9 +35,9 @@ class AboutUsView extends StatelessWidget {
                   Text(
                     "About Us",
                     style: TextStyle(
-                      fontSize: getTextSize(17),
+                      fontSize: getTextSize(19),
                       color: kWhiteColor,
-                      fontWeight: FontWeight.w700,
+                      fontWeight: FontWeight.w900,
                     ),
                   ),
                   getVerticalSpace(15),
@@ -52,7 +52,7 @@ User can simply select their symbol (X/O) at the start of their game and they ca
                     style: TextStyle(
                       fontSize: getTextSize(15),
                       fontWeight: FontWeight.w400,
-                      color: kLightColor,
+                      color: kWhiteColor,
                       letterSpacing: 0.17,
                       height: 1.5,
                     ),
@@ -64,7 +64,7 @@ User can simply select their symbol (X/O) at the start of their game and they ca
               width: Get.width * 0.7,
               decoration: BoxDecoration(
                 gradient: const LinearGradient(
-                  colors: [kButtonFirstEnd, kButtonThirdStart],
+                  colors: [kButtonSecondStart, kButtonThirdStart],
                   begin: Alignment.topLeft,
                   end: Alignment.bottomRight,
                 ),
