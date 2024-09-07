@@ -41,6 +41,7 @@ dependencies:
   flutter_svg:
   intl:
   google_fonts:
+  super_tooltip:
 
 dev_dependencies:
   flutter_test:

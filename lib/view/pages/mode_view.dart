@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:super_tooltip/super_tooltip.dart';
 import 'package:tic_tac_toe/res/constants/fonts.dart';
+import 'package:tic_tac_toe/view/navigations/multi_player.dart';
+import 'package:tic_tac_toe/view/navigations/single_player.dart';
 import 'package:tic_tac_toe/view/pages/about_view.dart';
 
 import '../../res/components/app_colors.dart';
@@ -82,7 +85,9 @@ class ModeView extends StatelessWidget {
                   borderRadius: BorderRadius.circular(50),
                 ),
                 child: MaterialButton(
-                  onPressed: () {},
+                  onPressed: () {
+                    Get.to(() => const SinglePlayerView());
+                  },
                   child: Padding(
                     padding: const EdgeInsets.all(8.0),
                     child: Text(
@@ -106,7 +111,9 @@ class ModeView extends StatelessWidget {
                   borderRadius: BorderRadius.circular(50),
                 ),
                 child: MaterialButton(
-                  onPressed: () {},
+                  onPressed: () {
+                    Get.to(() => const MultiPlayerView());
+                  },
                   child: Padding(
                     padding: const EdgeInsets.all(8.0),
                     child: Text(
@@ -119,25 +126,34 @@ class ModeView extends StatelessWidget {
                 ),
               ),
               getVerticalSpace(15),
-              Container(
-                width: Get.width * 0.7,
-                decoration: BoxDecoration(
-                  gradient: const LinearGradient(
-                    colors: [kButtonThirdStart, kButtonThirdEnd],
-                    begin: Alignment.topLeft,
-                    end: Alignment.bottomRight,
+              SuperTooltip(
+                content: const Text(
+                  "Not Available",
+                  softWrap: true,
+                  style: TextStyle(
+                    color: kPrimaryGreen,
                   ),
-                  borderRadius: BorderRadius.circular(50),
                 ),
-                child: MaterialButton(
-                  onPressed: () {},
-                  child: Padding(
-                    padding: const EdgeInsets.all(8.0),
-                    child: Text(
-                      "Online",
-                      style: TextStyle(
-                          fontSize: CustomFontSize.extraExtraLarge(context),
-                          color: kWhiteColor),
+                child: Container(
+                  width: Get.width * 0.7,
+                  decoration: BoxDecoration(
+                    gradient: const LinearGradient(
+                      colors: [kButtonThirdStart, kButtonThirdEnd],
+                      begin: Alignment.topLeft,
+                      end: Alignment.bottomRight,
+                    ),
+                    borderRadius: BorderRadius.circular(50),
+                  ),
+                  child: MaterialButton(
+                    onPressed: () {},
+                    child: Padding(
+                      padding: const EdgeInsets.all(8.0),
+                      child: Text(
+                        "Online",
+                        style: TextStyle(
+                            fontSize: CustomFontSize.extraExtraLarge(context),
+                            color: kWhiteColor),
+                      ),
                     ),
                   ),
                 ),
@@ -146,12 +162,12 @@ class ModeView extends StatelessWidget {
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  Text("Need Help? ", style: TextStyle(color: kWhiteColor)),
+                  const Text("Need Help? ", style: TextStyle(color: kWhiteColor)),
                   GestureDetector(
                     onTap: () {
-                      Get.to(() => AboutUsView());
+                      Get.to(() => const AboutUsView());
                     },
-                    child: Text(
+                    child: const Text(
                       "About Us",
                       style: TextStyle(color: kPrimaryYellow),
                     ),

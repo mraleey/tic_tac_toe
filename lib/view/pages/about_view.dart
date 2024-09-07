@@ -3,7 +3,6 @@ import 'package:get/get.dart';
 import 'package:tic_tac_toe/view/pages/mode_view.dart';
 
 import '../../../res/components/app_colors.dart';
-import '../../../res/components/button.dart';
 import '../../../res/components/size.dart';
 import '../../res/constants/fonts.dart';
 
@@ -72,7 +71,9 @@ User can simply select their symbol (X/O) at the start of their game and they ca
                 borderRadius: BorderRadius.circular(50),
               ),
               child: MaterialButton(
-                onPressed: () {},
+                onPressed: () {
+                  Get.to(() => const ModeView());
+                },
                 child: Padding(
                   padding: const EdgeInsets.all(8.0),
                   child: Text(
