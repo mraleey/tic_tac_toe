@@ -2,9 +2,9 @@ import 'dart:convert';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:shared_preferences/shared_preferences.dart';
+import 'package:tic_tac_toe/view/pages/mode_view.dart';
 
 import '../res/components/app_colors.dart';
-import '../view/home.dart';
 import '../repository/login_repository.dart';
 
 class LoginController extends GetxController {
@@ -54,7 +54,7 @@ class LoginController extends GetxController {
     var user = users[0];
     await _saveUserInfo(user);
     if (user['TYPE'] == 0) {
-      Get.to(const HomeView());
+      Get.to(const ModeView());
       _showSnackbar("Success", "Welcome ${user['usernm']}", kPrimaryGreen);
       _clearInputFields();
       return true;

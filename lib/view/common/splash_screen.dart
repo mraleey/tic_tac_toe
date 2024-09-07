@@ -32,30 +32,17 @@ class _SplashScreenState extends State<SplashScreen> {
             children: [
               Center(
                 child: Image.asset(
-                  "assets/images/splash_screen.png",
+                  "assets/images/splash_screen.webp",
                   height: Get.height * 0.6,
                   width: Get.width * 0.6,
                 ),
               ),
               const AnimatedBar(),
-              Column(
-                mainAxisAlignment: MainAxisAlignment.center,
-                crossAxisAlignment: CrossAxisAlignment.center,
-                children: [
-                  Text(
-                    'A Product of Multi Net',
-                    style: TextStyle(
-                      fontSize: CustomFontSize.extraLarge(context),
-                      fontWeight: FontWeight.bold,
-                    ),
-                  ),
-                  Text(
-                    'Powered by Solution Experts',
-                    style: TextStyle(
-                      fontSize: CustomFontSize.large(context),
-                    ),
-                  ),
-                ],
+              Text(
+                'Version 1.0.0',
+                style: TextStyle(
+                  fontSize: CustomFontSize.extraLarge(context),
+                ),
               ),
             ],
           ),
